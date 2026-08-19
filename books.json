@@ -1,10 +1,498 @@
 [
   {
+    "id": 56,
+    "title": "21 lecciones para el siglo xxi",
+    "subtitle": "",
+    "genre": "Ensayo",
+    "author": "Yuval noah Harari",
+    "editorial": "Debolsillo"
+  },
+  {
+    "id": 50,
+    "title": "A murder is announced",
+    "subtitle": "A miss marple mystery",
+    "genre": "Novela",
+    "author": "Agatha Christie",
+    "editorial": "William morrow"
+  },
+  {
+    "id": 11,
+    "title": "A thief of time",
+    "subtitle": "A leaphorn & chee novel",
+    "genre": "Cultura/narrativa",
+    "author": "Tony Hillerman",
+    "editorial": "Harper"
+  },
+  {
+    "id": 8,
+    "title": "African stories",
+    "subtitle": "",
+    "genre": "Cultura",
+    "author": "Ben Okri*",
+    "editorial": "Everyman's pocket classics"
+  },
+  {
     "id": 1,
     "title": "Aves sin nido",
     "subtitle": "-",
     "genre": "Novela",
     "author": "Clorinda Matto de turner",
     "editorial": "Centrium"
+  },
+  {
+    "id": 22,
+    "title": "Canandaigua",
+    "subtitle": "",
+    "genre": "Poesia",
+    "author": "Donald Revell",
+    "editorial": "Auburn hall"
+  },
+  {
+    "id": 18,
+    "title": "Chess",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Stefan Zweig",
+    "editorial": "Penguin books"
+  },
+  {
+    "id": 2,
+    "title": "Comentarios reales de los incas",
+    "subtitle": "",
+    "genre": "Historico",
+    "author": "Inca Garcilaso de la vega",
+    "editorial": "Vitruvian publishing house"
+  },
+  {
+    "id": 39,
+    "title": "Coto",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Jose Marin canas",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 52,
+    "title": "Decolonize museums",
+    "subtitle": "",
+    "genre": "Cultura",
+    "author": "Shimrit Lee",
+    "editorial": "Or books"
+  },
+  {
+    "id": 31,
+    "title": "Dracula",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Bram Stoker",
+    "editorial": "Penguin books"
+  },
+  {
+    "id": 46,
+    "title": "Educacion en una sociedad libre",
+    "subtitle": "",
+    "genre": "Politica",
+    "author": "Emma Gamboa",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 61,
+    "title": "El amor en los tiempos de colera",
+    "subtitle": "",
+    "genre": "Novela",
+    "author": "Gabriel Garcia marquez",
+    "editorial": "Literatura random house"
+  },
+  {
+    "id": 40,
+    "title": "El arbol enfermo",
+    "subtitle": "",
+    "genre": "Novela",
+    "author": "Carlos Gagini",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 62,
+    "title": "El codigo del cancer",
+    "subtitle": "Una aproximacion nueva y revolucionaria a un misterio medico",
+    "genre": "Biologia/ensayo",
+    "author": "Jason Fung",
+    "editorial": "Irio"
+  },
+  {
+    "id": 34,
+    "title": "El contrato social",
+    "subtitle": "",
+    "genre": "Filosofia",
+    "author": "Jean-jaques Rousseau",
+    "editorial": "Editorial universitaria centroamericana educa"
+  },
+  {
+    "id": 54,
+    "title": "El desaparecido",
+    "subtitle": "",
+    "genre": "Novela",
+    "author": "Franz Kafka",
+    "editorial": "Debolsillo"
+  },
+  {
+    "id": 60,
+    "title": "El hombre en busca de sentido",
+    "subtitle": "",
+    "genre": "Historico/narrativa/psicologia",
+    "author": "Viktor Frankl",
+    "editorial": "Herder"
+  },
+  {
+    "id": 32,
+    "title": "El libro de la patria",
+    "subtitle": "",
+    "genre": "Poesia",
+    "author": "Alfonso Chase",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 29,
+    "title": "El metodo lean stratup",
+    "subtitle": "Como crear empresas de exito utilizando inovacion continua",
+    "genre": "Negocios",
+    "author": "Eric Ries",
+    "editorial": "Deusto"
+  },
+  {
+    "id": 59,
+    "title": "El monje que vendio su ferrari",
+    "subtitle": "Una fabula espiritual",
+    "genre": "Autoayuda",
+    "author": "Robin Sharma",
+    "editorial": "Debolsillo"
+  },
+  {
+    "id": 42,
+    "title": "El peso vivo",
+    "subtitle": "",
+    "genre": "Poesia",
+    "author": "Juleita Dobles",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 30,
+    "title": "El planeta verde",
+    "subtitle": "",
+    "genre": "Cuento",
+    "author": "Floria Herrero pinto",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 13,
+    "title": "El relojero ciego",
+    "subtitle": "Porque la evolucion de la vida no necesita ningun creador",
+    "genre": "Biologia/filosofia",
+    "author": "Richard Dawkins",
+    "editorial": "Booket"
+  },
+  {
+    "id": 45,
+    "title": "Fabula del bosque",
+    "subtitle": "",
+    "genre": "Fabula",
+    "author": "Fernando Centeno guell",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 21,
+    "title": "General relativity the theoretical minimum",
+    "subtitle": "What you need to know to start doing physics",
+    "genre": "Fisica",
+    "author": "Leonard susskind & andre cabannes",
+    "editorial": "Allen lane"
+  },
+  {
+    "id": 57,
+    "title": "Homo deus",
+    "subtitle": "A brief history of tomorrow",
+    "genre": "Ensayo",
+    "author": "Yuval noah Harari",
+    "editorial": "Vintage book"
+  },
+  {
+    "id": 58,
+    "title": "How to change your mind",
+    "subtitle": "What the new science of psychedelics teaches us about consciouness, dying, addiction, depression, and transcendence",
+    "genre": "Ensayo",
+    "author": "Micheal Pollan",
+    "editorial": "Penguin books"
+  },
+  {
+    "id": 26,
+    "title": "Interior chinatown",
+    "subtitle": "A novel",
+    "genre": "Narrativa",
+    "author": "Charles Yu",
+    "editorial": "Vintage book"
+  },
+  {
+    "id": 19,
+    "title": "L'esglesia del mar",
+    "subtitle": "",
+    "genre": "Historico/narrativa",
+    "author": "Ildefonso Falcones",
+    "editorial": "Debutxaca"
+  },
+  {
+    "id": 27,
+    "title": "La naranja mecanica",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Anthony Burgess",
+    "editorial": "Booket"
+  },
+  {
+    "id": 37,
+    "title": "La vuelta al mundo en 80 dias",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Julio Verne",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 24,
+    "title": "Les miserables",
+    "subtitle": "",
+    "genre": "Historico/narrativa",
+    "author": "Victor Hugo",
+    "editorial": "Fall river"
+  },
+  {
+    "id": 51,
+    "title": "Los 7 habitos de la gente altamente efectiva",
+    "subtitle": "",
+    "genre": "Negocios",
+    "author": "Stephen r. Covey",
+    "editorial": "Booket"
+  },
+  {
+    "id": 38,
+    "title": "Los dias tristes y otros cuentos",
+    "subtitle": "",
+    "genre": "Cuento",
+    "author": "Milton Salazar ruiz",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 35,
+    "title": "Los juegos fortuitos",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Alfonso Chase",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 20,
+    "title": "Mathematical olympiad challenges",
+    "subtitle": "",
+    "genre": "Matematica",
+    "author": "Titu andreescu & razvan gelca",
+    "editorial": "Birkhauser"
+  },
+  {
+    "id": 14,
+    "title": "Modern man in search of soul",
+    "subtitle": "",
+    "genre": "Psicologia",
+    "author": "Carl gustav Jung",
+    "editorial": "Routledge"
+  },
+  {
+    "id": 28,
+    "title": "Momentos estelares de la humanidad",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Stefan Zweig",
+    "editorial": "Alma"
+  },
+  {
+    "id": 44,
+    "title": "Mystery of the mayan jewels",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Pachita crespi & jessica lee",
+    "editorial": "Charles scribner's sons"
+  },
+  {
+    "id": 47,
+    "title": "Obras de rodrigo facio",
+    "subtitle": "Documentos universitarios",
+    "genre": "Politica",
+    "author": "Rodrigo Facio",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 4,
+    "title": "On the origin of species",
+    "subtitle": "",
+    "genre": "Biologia",
+    "author": "Charles Darwin",
+    "editorial": "Natural history museum publishing"
+  },
+  {
+    "id": 12,
+    "title": "One piece",
+    "subtitle": "Egghead vol. 108",
+    "genre": "Manga",
+    "author": "Eiichiro Oda",
+    "editorial": "Shonen jump"
+  },
+  {
+    "id": 25,
+    "title": "Origin",
+    "subtitle": "A genetic history of the americas",
+    "genre": "Hitorico/biologia",
+    "author": "Jennifer Raff",
+    "editorial": "Twelve new york"
+  },
+  {
+    "id": 33,
+    "title": "Papa goriot",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Honorato De balzac",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 43,
+    "title": "Peomas de la respuesta",
+    "subtitle": "",
+    "genre": "Poesia",
+    "author": "Jorge Charpenter",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 36,
+    "title": "Peosias de costa rica, america y espana",
+    "subtitle": "",
+    "genre": "Poesia",
+    "author": "Editorial Costa rica*",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 48,
+    "title": "Relatos escogidos de carmen lyra",
+    "subtitle": "",
+    "genre": "Cuento",
+    "author": "Carmen Lyra",
+    "editorial": "Editorial costa rica"
+  },
+  {
+    "id": 17,
+    "title": "Rights and freedoms in the spanish constitution",
+    "subtitle": "",
+    "genre": "Politica",
+    "author": "Mar aguilera vaques & rosario serra cristobal",
+    "editorial": "Tirant lo blanch"
+  },
+  {
+    "id": 6,
+    "title": "The antropocene reviewed",
+    "subtitle": "Essays on a human-centered planet",
+    "genre": "Narrativa",
+    "author": "John Green",
+    "editorial": "Dutton"
+  },
+  {
+    "id": 3,
+    "title": "The best american science and nature writing",
+    "subtitle": "",
+    "genre": "Biologia",
+    "author": "Edward o. Wilson",
+    "editorial": "Houghton mifling company"
+  },
+  {
+    "id": 16,
+    "title": "The communist manifesto",
+    "subtitle": "",
+    "genre": "Politica",
+    "author": "Karl marx & friederich engels",
+    "editorial": "Penguin books"
+  },
+  {
+    "id": 15,
+    "title": "The epigenetics revolution",
+    "subtitle": "How modern biology is rewritting our understanding of genetic disease and inheritance",
+    "genre": "Biologia",
+    "author": "Nessa Carey",
+    "editorial": "Icon books ldt."
+  },
+  {
+    "id": 5,
+    "title": "The prince",
+    "subtitle": "",
+    "genre": "Politica",
+    "author": "Niccolo Machiavelli",
+    "editorial": "Penguin books"
+  },
+  {
+    "id": 7,
+    "title": "The prirates own book",
+    "subtitle": "Authentic narratives of the most celebrated sea robbers",
+    "genre": "Historico",
+    "author": "Marine Research society",
+    "editorial": "Dover publications, inc."
+  },
+  {
+    "id": 10,
+    "title": "The protestant ethic and the spirit of capitalism",
+    "subtitle": "The revised 1920 edition",
+    "genre": "Politica",
+    "author": "Max Weber",
+    "editorial": "Oxford university press"
+  },
+  {
+    "id": 49,
+    "title": "The scarlet letter",
+    "subtitle": "",
+    "genre": "Novela",
+    "author": "Nathaniel Hawthorne",
+    "editorial": "The townsend library"
+  },
+  {
+    "id": 9,
+    "title": "The war of the flowers",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Tad Williams",
+    "editorial": "Daw books"
+  },
+  {
+    "id": 55,
+    "title": "To kill a mockingbird",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Harper Lee",
+    "editorial": "Waner books"
+  },
+  {
+    "id": 23,
+    "title": "To the lighthouse",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Virginia Woolf",
+    "editorial": "Mariner classics"
+  },
+  {
+    "id": 41,
+    "title": "Traidor, inconfeso y martir",
+    "subtitle": "",
+    "genre": "Narrativa",
+    "author": "Jose Zorrilla",
+    "editorial": "Biblioteca anaya"
+  },
+  {
+    "id": 53,
+    "title": "Uncivilised",
+    "subtitle": "Ten lies that made the west",
+    "genre": "Hitorico/politica",
+    "author": "Subhadra Das",
+    "editorial": "Coronet"
   }
 ]
