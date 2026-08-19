@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca de Steven — Catálogo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:      #EDE6D6;
+    --paper-alt:  #E3D9C2;
+    --card:       #F5EFE1;
+    --ink:        #2B2E4A;
+    --ink-soft:   #5C6088;
+    --brass:      #A9812F;
+    --burgundy:   #7A2E2E;
+    --line:       #B8AA8E;
+    --shadow:     rgba(43,46,74,0.18);
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse at top, var(--paper-alt) 0%, var(--paper) 60%);
+    color:var(--ink);
+    font-family:'Spectral', serif;
+    min-height:100vh;
+  }
+
+  /* subtle paper grain */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    pointer-events:none;
+    opacity:0.05;
+    background-image:
+      repeating-linear-gradient(0deg, #000 0, transparent 1px, transparent 2px),
+      repeating-linear-gradient(90deg, #000 0, transparent 1px, transparent 2px);
+    background-size: 3px 3px;
+  }
+
+  .drawer{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .drawer-front{
+    text-align:center;
+    margin-bottom: 40px;
+  }
+
+  .eyebrow{
+    font-family:'Special Elite', monospace;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    font-size:12px;
+    color:var(--burgundy);
+    margin:0 0 10px;
+  }
+
+  h1{
+    font-family:'IM Fell Double Pica SC', serif;
+    font-size: clamp(34px, 6vw, 56px);
+    font-weight:400;
+    margin: 0 0 8px;
+    color:var(--ink);
+    letter-spacing:0.01em;
+  }
+
+  .subhead{
+    color:var(--ink-soft);
+    font-style:italic;
+    font-size:16px;
+    margin:0;
+  }
+
+  /* search slot styled like the label window on a card-catalog drawer */
+  .search-slot{
+    position:relative;
+    margin: 40px auto 0;
+    max-width: 620px;
+  }
+
+  .search-slot label{
+    display:block;
+    font-family:'Special Elite', monospace;
+    font-size:11px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:8px;
+    text-align:center;
+  }
+
+  .search-slot input{
+    width:100%;
+    padding: 16px 22px;
+    font-family:'Spectral', serif;
+    font-size:19px;
+    font-style:italic;
+    color:var(--ink);
+    background: var(--card);
+    border: 1.5px solid var(--line);
+    border-radius: 3px;
+    box-shadow: inset 0 2px 6px var(--shadow), 0 3px 0 var(--line);
+    outline:none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .search-slot input::placeholder{
+    color: #9a927c;
+    font-style:italic;
+  }
+
+  .search-slot input:focus{
+    border-color: var(--brass);
+    box-shadow: inset 0 2px 6px var(--shadow), 0 0 0 3px rgba(169,129,47,0.25);
+  }
+
+  .search-slot input:focus-visible{
+    outline: 2px solid var(--brass);
+    outline-offset: 2px;
+  }
+
+  .result-count{
+    text-align:center;
+    font-family:'Special Elite', monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    color:var(--ink-soft);
+    margin: 14px 0 0;
+    min-height: 16px;
+  }
+
+  .cards{
+    margin-top: 36px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .card{
+    position:relative;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 22px 20px 18px;
+    box-shadow: 0 1px 0 var(--line), 0 6px 14px -8px var(--shadow);
+    transform: rotate(var(--tilt, 0deg));
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    animation: rise 0.3s ease both;
+  }
+
+  .card:hover{
+    transform: rotate(0deg) translateY(-3px);
+    box-shadow: 0 2px 0 var(--brass), 0 14px 22px -10px var(--shadow);
+  }
+
+  @keyframes rise{
+    from{ opacity:0; transform: translateY(6px) rotate(var(--tilt,0deg)); }
+    to{ opacity:1; transform: translateY(0) rotate(var(--tilt,0deg)); }
+  }
+
+  .call-number{
+    display:inline-block;
+    font-family:'Special Elite', monospace;
+    font-size:11px;
+    color:var(--burgundy);
+    background: rgba(122,46,46,0.08);
+    border:1px solid rgba(122,46,46,0.25);
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+    letter-spacing:0.04em;
+  }
+
+  .card h2{
+    font-family:'IM Fell Double Pica SC', serif;
+    font-weight:400;
+    font-size:22px;
+    line-height:1.2;
+    margin: 0 0 4px;
+    color:var(--ink);
+  }
+
+  .card .subtitle{
+    font-size:14px;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin: 0 0 12px;
+  }
+
+  .card dl{
+    margin:14px 0 0;
+    padding-top:12px;
+    border-top: 1px dashed var(--line);
+    display:grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px 10px;
+    font-size: 13px;
+  }
+
+  .card dt{
+    font-family:'Special Elite', monospace;
+    font-size:10px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color: var(--brass);
+    align-self:start;
+    padding-top:2px;
+  }
+
+  .card dd{
+    margin:0;
+    color: var(--ink);
+  }
+
+  .genre-tag{
+    display:inline-block;
+    font-size:12px;
+    background: rgba(169,129,47,0.14);
+    color: var(--brass);
+    padding: 1px 9px;
+    border-radius: 10px;
+    border: 1px solid rgba(169,129,47,0.3);
+  }
+
+  .empty, .loading{
+    text-align:center;
+    color: var(--ink-soft);
+    font-style:italic;
+    margin-top: 60px;
+    font-size:17px;
+    line-height:1.6;
+  }
+
+  .empty strong, .loading strong{
+    display:block;
+    font-family:'IM Fell Double Pica SC', serif;
+    font-style:normal;
+    font-size:24px;
+    color:var(--ink);
+    margin-bottom:8px;
+  }
+
+  footer{
+    text-align:center;
+    margin-top: 64px;
+    font-size:12px;
+    color: var(--ink-soft);
+    font-family:'Special Elite', monospace;
+    letter-spacing:0.06em;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .card{ animation:none; transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+
+  @media (max-width: 480px){
+    .drawer{ padding: 40px 16px 60px; }
+    .cards{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="drawer">
+  <div class="drawer-front">
+    <p class="eyebrow">Catálogo · Solo consulta</p>
+    <h1>Biblioteca de Steven</h1>
+    <p class="subhead">Busca por título, autor, género o editorial.</p>
+  </div>
+
+  <div class="search-slot">
+    <label for="search-input">Ficha de búsqueda</label>
+    <input
+      id="search-input"
+      type="text"
+      autocomplete="off"
+      placeholder="Escribe un título, autor, género…"
+      aria-label="Buscar en el catálogo">
+  </div>
+
+  <p class="result-count" id="result-count" aria-live="polite"></p>
+
+  <div id="output"></div>
+
+  <footer>Catálogo de Libros</footer>
+</div>
+
+<script>
+(function(){
+  const input = document.getElementById('search-input');
+  const output = document.getElementById('output');
+  const resultCount = document.getElementById('result-count');
+
+  let books = [];
+  const tilts = [-1.2, 0.8, -0.4, 1.4, -0.9, 0.3];
+
+  function normalize(s){
+    return (s || '')
+      .toString()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, ''); // strip accents for friendlier matching
+  }
+
+  function escapeHtml(s){
+    return (s || '').toString()
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  function cardHtml(book, i){
+    const tilt = tilts[i % tilts.length];
+    const subtitle = book.subtitle
+      ? `<p class="subtitle">${escapeHtml(book.subtitle)}</p>`
+      : '';
+    return `
+      <article class="card" style="--tilt:${tilt}deg">
+        <span class="call-number">N.º ${escapeHtml(book.id)}</span>
+        <h2>${escapeHtml(book.title)}</h2>
+        ${subtitle}
+        <dl>
+          <dt>Autor</dt><dd>${escapeHtml(book.author)}</dd>
+          <dt>Género</dt><dd><span class="genre-tag">${escapeHtml(book.genre)}</span></dd>
+          <dt>Editorial</dt><dd>${escapeHtml(book.editorial)}</dd>
+        </dl>
+      </article>`;
+  }
+
+  function render(list, query){
+    if (!query){
+      output.innerHTML = `
+        <div class="empty">
+          <strong>El catálogo está listo</strong>
+          Escribe algo en la ficha de búsqueda para ver los libros.
+        </div>`;
+      resultCount.textContent = '';
+      return;
+    }
+
+    if (list.length === 0){
+      output.innerHTML = `
+        <div class="empty">
+          <strong>Sin resultados</strong>
+          Ningún libro coincide con «${escapeHtml(query)}».
+        </div>`;
+      resultCount.textContent = '0 resultados';
+      return;
+    }
+
+    output.innerHTML = `<div class="cards">${list.map(cardHtml).join('')}</div>`;
+    resultCount.textContent = `${list.length} resultado${list.length === 1 ? '' : 's'}`;
+  }
+
+  function search(query){
+    const q = normalize(query);
+    if (!q) return [];
+    return books.filter(b =>
+      normalize(b.title).includes(q) ||
+      normalize(b.subtitle).includes(q) ||
+      normalize(b.author).includes(q) ||
+      normalize(b.genre).includes(q) ||
+      normalize(b.editorial).includes(q) ||
+      normalize(String(b.id)).includes(q)
+    );
+  }
+
+  let debounceTimer;
+  input.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      const q = input.value.trim();
+      render(search(q), q);
+    }, 80);
+  });
+
+  output.innerHTML = `<div class="loading"><strong>Abriendo el catálogo…</strong></div>`;
+
+  fetch('books.json', { cache: 'no-store' })
+    .then(res => {
+      if (!res.ok) throw new Error('No se pudo cargar books.json');
+      return res.json();
+    })
+    .then(data => {
+      books = Array.isArray(data) ? data : [];
+      render([], '');
+      input.focus();
+    })
+    .catch(err => {
+      output.innerHTML = `
+        <div class="empty">
+          <strong>No se pudo cargar el catálogo</strong>
+          Verifica que el archivo books.json esté junto a esta página.
+        </div>`;
+      console.error(err);
+    });
+})();
+</script>
+
+</body>
+</html>
